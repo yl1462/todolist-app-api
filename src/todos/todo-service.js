@@ -25,10 +25,10 @@ const todoService = {
     return knex('todos').where({ id }).delete();
   },
 
-  updateFolder(knex, id, newFolderFields) {
-    return knex('folders')
+  editToDo(knex, id, editedToDo) {
+    return knex('todos')
       .where({ id })
-      .update(newFolderFields);
+      .update(editedToDo);
   }
 };
 
