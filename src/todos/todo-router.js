@@ -75,7 +75,7 @@ todoRouter
     const numberOfValues = Object.values(todoToEdit).filter(Boolean).length;
     if (numberOfValues === 0)
       return res.status(400).json({
-        error: { message: 'Body must contain name.' }
+        error: { message: 'Body must contain title/description.' }
       });
 
     todoService.editToDo(
