@@ -1,26 +1,26 @@
-# Express Boilerplate!
+To Do List App (Server Side)
 
-This is a boilerplate project used for starting new projects!
+Link to live app: https://todolist-app-yl1462.vercel.app/
 
-## Set up
+Documentation of API: https://afternoon-springs-29511.herokuapp.com/
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Just like the name says, this is an app for you to add, edit, delete your day to day to do items. There is no ad or complicated functions to distract yourself. Simple but functional.
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+Screenshots:
 
-## Scripts
+Straight forward to do list: 
 
-Start the application `npm start`
+![113518108-d72af500-9549-11eb-90b8-a675eb0b4d1f](https://user-images.githubusercontent.com/68250067/113805444-275eae80-9726-11eb-9d2b-1346b51897a7.png)
 
-Start nodemon for the application `npm run dev`
 
-Run the tests `npm test`
+One click to add new to do item with description for more details: 
 
-## Deploying
+![113518113-e01bc680-9549-11eb-9a66-19004a14abda](https://user-images.githubusercontent.com/68250067/113805454-2b8acc00-9726-11eb-886c-26f8f35b9deb.png)
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.
+
+Need to change something, no need to delete and restart, just 'edit': 
+
+![113518115-e316b700-9549-11eb-9f75-fc7917a6bf04](https://user-images.githubusercontent.com/68250067/113805464-2fb6e980-9726-11eb-8880-60414febdf86.png)
+
+
+Technology used: Javascript, Node, CSS, HTML
