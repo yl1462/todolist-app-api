@@ -17,8 +17,10 @@ app.get('/', (req, res) => {
   res.send('Hello, world!')
 })
 
+//home page
 app.use('/api/todo', todoRouter)
 
+//error handler
 app.use(function errorHandler(error, req, res, next) {
   let response
   if (NODE_ENV === 'production') {

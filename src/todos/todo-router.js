@@ -11,6 +11,7 @@ const serializeToDo = todo => ({
   description: xss(todo.description)
 });
 
+//home page route
 todoRouter
   .route('/')
   .get((req, res, next) => {
@@ -43,6 +44,7 @@ todoRouter
       .catch(next);
   });
 
+// individual to do items
 todoRouter
   .route('/:todoid')
   .all((req, res, next) => {
@@ -61,6 +63,7 @@ todoRouter
   .get((req, res, next) => {
     res.json(serializeToDo(res.todo));
   })
+  // delete selected to do
   .delete((req, res, next) => {
     todoService.deleteToDo(req.app.get('db'), req.params.todoid)
       .then(() => {
@@ -68,6 +71,7 @@ todoRouter
       })
       .catch(next);
   })
+  // edit selected to do
   .patch(jsonParser, (req, res, next) => {
     const { title, description } = req.body,
       todoToEdit = { title, description };

@@ -13,7 +13,7 @@ describe('Todos Endpoints', function() {
   before('make knex instance to simulate server', () => {
     db = knex({
       client: 'pg',
-      connection: process.env.TEST_DATABASE_URL //Did you migrate the test database?...
+      connection: process.env.TEST_DATABASE_URL //remember to migrate the test database
     });
     app.set('db', db);
   });
@@ -28,6 +28,7 @@ describe('Todos Endpoints', function() {
     return db.raw('TRUNCATE todos RESTART IDENTITY CASCADE');
   });
 
+  //test home page
   describe('GET /api/todo', () => {
     context('todo table has no contents', () => {
       it('Responds with a 200 status and an empty array', () => {
@@ -50,6 +51,7 @@ describe('Todos Endpoints', function() {
         );
       });
 
+      //test if table could receive all testing data
       it('responds with an array containing all test todo', () => {
         return supertest(app)
           .get('/api/todo')
@@ -81,6 +83,7 @@ describe('Todos Endpoints', function() {
     });
   });
 
+  //test selected to do
   describe('GET /api/todo/id', () => {
     context(
       'given todo table has no contents or no todo ids match given id',

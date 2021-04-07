@@ -1,7 +1,9 @@
 const todoService = {
+  //display all to do
   getAllToDos(knex) {
     return knex.select('*').from('todos');
   },
+  //add new to do
   insertToDo(knex, newToDo) {
     return knex
       .insert(newToDo)
@@ -12,6 +14,7 @@ const todoService = {
       });
   },
 
+  //getting into selected to do
   getById(knex, id) {
     return knex
       .from('todos')
@@ -20,11 +23,13 @@ const todoService = {
       .first();
   },
 
+  //delete selected to do
   deleteToDo(knex, id) {
     console.log(id)
     return knex('todos').where({ id }).delete();
   },
 
+  //edit selected to do
   editToDo(knex, id, editedToDo) {
     return knex('todos')
       .where({ id })
