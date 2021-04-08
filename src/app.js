@@ -14,7 +14,7 @@ app.use(helmet())
 app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send('Hello, world!')
+  res.send('To Do List App Server Running')
 })
 
 //home page
